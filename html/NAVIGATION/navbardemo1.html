@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Navbar</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            .nav-container{
+               /* border:1px solid white;*/
+                color:white;
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                border-bottom: 1px solid white;
+            }
+            .menu{
+               border: 1px solid lime;
+                padding: 12px;
+                text-decoration: none;
+                color:white;
+                font-size: 20px;
+                font-family:  monospace;
+            }
+            .space{
+                flex-grow: 1;
+            }
+            .search{
+                border:1px solid red;
+                display: flex;
+                align-items:center;
+                width: 23vw;
+                background-color: blac;
+                color:black;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .search-input{
+                padding:5px;
+                font-size: 15px;
+                border: 0px;
+            }
+            .search-ico{
+                padding-right: 8px;
+                font-size: 27px;
+            }
+            .container{
+                flex-grow: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav-container">
+           <a href="#" class="menu">Home</a>
+           <a href="#" class="menu">ABOUT US</a>
+           <a href="#" class="menu">PG-DAC</a>
+           <a href="#" class="menu">PG-DFDB</a>
+           <div class="space search-menu"></div>
+           <div class="search">
+              <input type="text" class="search-input" placeholder="search....">
+              <span class="search-ico">Se</span>
+            </div>
+           <a href="#" class="menu">Login</a>
+        </div>
+
+        <div class="heading">
+           <h1>Bootstrap pricing table</h1>
+           <p>This is parathis is para</p>
+           <p>this is parathis is para</p>
+        </div>
+
+        <div class="container">
+            <div class=""></div>
+        </div>
+    </body>
+</html>

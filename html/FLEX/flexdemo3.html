@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>flex3</title>
+        <style>
+          .container{
+             border: 1px solid black;
+             height: 97vh;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             background-color: green;
+            
+          }
+          .inner{
+            border: 1px solid black;
+            padding: 40px;
+            background-color: white;
+        
+          }
+          .input{
+              padding: 10px;
+              width: 300px;
+              margin: 20px;
+              background-color: lightgrey;
+            
+          }
+          button{
+            padding: 10px;
+              width: 300px;
+              background-color: green;
+              margin: 20px;
+          }
+          #span1{
+        
+            margin-left: 60px;
+        
+          }
+          #span2{
+            color: green;
+          }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="inner">
+                <input type="text" placeholder="username" class="input"><br>
+                <input type="text" placeholder="password" class="input"><br>
+                <button>Register</button><br>
+                <span id="span1">not registered?</span>
+                <span id="span2">create an account</span>
+            </div>
+        </div>
+    </body>
+</html>

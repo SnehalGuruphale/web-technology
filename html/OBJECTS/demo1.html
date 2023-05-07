@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Objects</title>
+        <script type="text/javascript">
+            var car1={
+                modalNo:"A10",
+                brand:"tata",
+                engineNo:"6784234",
+                chasinNo:"7639872"
+            }
+
+            var car2={
+                modalNo:"A10",
+                brand:"tata",
+                engineNo:"6784234",
+                chasinNo:"7639872"
+            }
+            var std1={
+                name:"snehal",
+                prn:"230380720037",
+                state:"MH",
+                email:"snehal@gmail.com"
+            }
+
+            var std2={
+                name:"snehal",
+                prn:"230380720037",
+                state:"MH",
+                email:"snehal@gmail.com"
+            }
+
+            //access object
+            console.log(std2)
+            console.log(std2)
+
+            //access each property
+            console.log(std2.name)
+            console.log(std2.email)
+            console.log(std1["name"])
+
+            std1["name"]="snehal patil"
+            std1.phone="7150334756"
+            console.log(std1)
+
+            //add new property to object
+            std1.email="snhal@12gmail.com"
+            console.log(std1)
+            std2.phone="777871265436576187"
+            console.log(std2)
+
+            //remove from the object
+            delete std1.state //delete the property
+            delete std2 //delete the object
+            console.log(std1)
+            console.log(std1)
+
+
+
+
+        </script>
+    </head>
+</html>

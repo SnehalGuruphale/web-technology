@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <Title>One</Title>
+        <style>
+            table{
+                background-color: aquamarine;
+                height: 700px;
+                width:700px;
+                margin-top: 20 px;
+            }
+            .para{
+                color:rgb(220, 20, 20);
+            }
+            input{
+                color: blueviolet;
+                background-color: rgb(250, 201, 246);
+            }
+        </style>
+    </head>
+    <Body>
+        <table border="1" height="600" width="500" cellpadding="0" >
+            <tr >
+                <td>last name</td>
+                <td><input type="text" placeholder="enter last name"></td>
+            </tr>
+            <tr>
+                <td>first name</td>
+                <td><input type="text"></td>
+            <tr>
+                <td>address</td>
+                <td><textarea cols="60" rows="3"></textarea></td>
+            </tr>
+            
+            <tr>
+                <td>city</td>
+                <td><input type="text"><b> State </b><input type="text"></td>
+                
+            </tr>
+            <tr>
+                <td>Zip/postal code</td>
+                <td><input type="text" size="8"></td>
+            </tr>
+            <tr>
+                <td>country</td>
+                <td>
+                    <select class="para">
+                        <option>banglore</option>
+                        <option>mumbai</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>phone(country code,area code,number)</td>
+                <td>(+<input type="text" size="2" placeholder="91">)<input type="text" size="5" placeholder="46323">-<input type="test" size="5" placeholder="34567"></td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>Birth date</td>
+                <td>month:<input type="text" size="2" placeholder="6"> &nbsp;&nbsp;day:<input type="text" size="2" placeholder="2"> year:<input type="test" size="4" placeholder="1992"></td>
+            </tr>
+            <tr>
+                <td>gender</td>
+                <td>
+                    <select class="para">
+                        <option>male</option>
+                        <option>female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>starting date</td>
+                <td class="para">
+                    <input type="radio">Spring 2006
+                    <input type="radio">Summer 2006
+
+                </td>
+            </tr>
+            <tr>
+                <td>comments/questions</td>
+                <td><textarea cols="80" rows="3"> </textarea></td>
+            </tr>
+            <tr>
+                <th colspan="2"> <input type="submit" value="Submit"> <input type="reset" value="clear this form"></th>
+            </tr>
+        </table>
+    </Body>
+</html>

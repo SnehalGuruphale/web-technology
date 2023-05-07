@@ -1,0 +1,7 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-content:center;
+    flex-shrink: 20px;
+    align-items: center;
+}

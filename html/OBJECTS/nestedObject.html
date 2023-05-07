@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>nested object</title>
+        <script type="text/javascript">
+            var std={
+                name:"siddhant",
+                age:"46",
+                contact:{
+                    phone:"8180022550",
+                    email:"snehal@gmail.com",
+                    address:{
+                        state:"mh",
+                        city :"pune",
+                        floor:3
+                    }
+
+                },
+                hobbies:["reading","singing","cooking"],
+            }
+            //access properties
+            std.contact.address.floor=4
+            std["contact"]["address"]["floor"]=4
+            std["contact"].address["floor"]=4
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
