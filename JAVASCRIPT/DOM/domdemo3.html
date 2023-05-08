@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>demo3</title>
+        <script type="text/javascript">
+            var std=[]
+
+            function userinput()
+            {
+                var n=document.getElementById("name").value
+                var a=document.getElementById("age").value
+                var s=document.getElementById("salary").value
+            
+                var temp={
+               name:n,
+               age:a,
+               salary:s
+                }
+                std.push(temp)
+            }
+            function displaydata(){
+                var htmlstr="<table border=1 borderspacing=0>"
+
+                    for(var i=0;i<std.length;i++)
+                   {
+                    htmlstr=htmlstr+"<tr><td>"+std[i].name+"</td>"
+                                         "<td>"+ std[i].age +"</td>"
+                                         "<td>"+ std[i].salary +"</td>"
+                    htmlstr=htmlstr+"</table>"
+                    document.getElementById("data").innerHTML=result
+                   }
+              displaydata();
+                }
+        </script>
+    </head>
+    <body>
+        Enter name<input type="text" id="name"><br>
+        enter age<input type="text" id="age"><br>
+        enter slaary<input type="text" id="salary"><br>
+        <button onclick="userinput">save</button>
+        <button onclick="displaydata">show</button>
+        <div id="data"></div>
+    </body>
+</html>

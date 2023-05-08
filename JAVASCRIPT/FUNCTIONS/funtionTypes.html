@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>function types</title>
+        <script type="text/javascript">
+            // 3types
+            //1.normal function
+
+            function sum(a,b)
+            {
+                var result=a+b
+                return result
+            }
+            var res=sum(2,3)
+
+            //2.anonymous function:function without name
+            //variable and use as normal function
+
+            var xyz=function (a,b) //to use just store it into variable
+            {
+                var result=a+b
+                return result
+            }
+            //to call
+            var res=xyz(10,20)
+
+            //3.arrow function : function without name and have short 
+            //syntax for one line(lambda)
+            //use: callback,assign to variable,use an normal function,
+            //oneliner function
+
+            var abc=(a,b) => //to use just store it into variable
+            {
+                var result=a+b
+                return result
+            }
+            var res=abc(10,20)
+
+            var sqr = a =>{   //for signle argument braces "()" are not compulsory
+                var result = a*a
+                return result
+            }
+            var res=sqr(20)
+            
+            //if arrow function have single statement and thet is return statement
+
+            var sum=(a,b)=> a+b
+            var res=sum(10,20)
+
+            var sqr=a=>a*a
+            var res=sqr(3)
+
+            var sqr=(a)=>a*a
+            var res=sqr(5)
+            
+        </script>
+    </head>
+</html>

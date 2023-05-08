@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>oops</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           
+            var s1={
+                name:"siddhant",
+                prn:1,
+                marks:80,
+                getGrade:function(){
+                    if(this.marks>80)
+                    {
+                        return "A"
+                    }
+                    else
+                    {
+                        return "F"
+                    }
+                }
+            }
+
+            var s2={
+                name:"siddhant",
+                prn:1,
+                marks:80,
+                getGrade:function(){
+                    if(this.marks>80)
+                    {
+                        return "A"
+                    }
+                    else
+                    {
+                        return "F"
+                    }
+                }
+            }
+
+            function Student()
+            {
+                this.name=""
+                this.prn=" "
+                this.phone=""
+                this.marks=0
+                this.getGrade=function(){
+                    if(this.marks>80)
+                    {
+                        return "A"
+                    }
+                    else
+                    {
+                        return "F"
+                    }
+                }
+            }
+
+            var sd1=new Student()
+            var sd2=new Student()
+            var sd3=new Student()
+
+            //student() //normal function call
+            console.log(std1.name)
+            std1.name="snehal"
+            std["prn"]=1
+            std1.email="snehal@123"
+            delete std1.marks
+            std1.getGrade()
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>RegExp</title>
+        <script>
+            //reg exp means pattern matching
+            /*
+               ^ -> line starting with
+               $ -> line ending with
+               . -> any character
+               + -> one or more occurrence
+               * -> zero or more occurrence
+               | -> or
+               [] -> range
+               () -> grouping
+
+               functions:
+
+               match
+               matchAll
+               replace
+               replaceAll
+            */
+
+           
+
+            var str="Abcc computer ha many programming languages.in which one of the most popular and lightweight language is javascript.java script is mainly used for web development purpose.it privides backend for the web programmers."
+            console.log(str.match(/language/))
+            console.log(str.match(/^c/))
+            console.log(str.match(/^Abc+/))
+            console.log(str.match(/^Abc{3}/))
+            console.log(str.match(/^Abc.d/))
+            console.log(str.match(/^Abc..o/))
+            console.log(str.match(/^Ab[b-xJ-X0-9]..o/))
+            console.log(str.match(/^Ab[b-xJ]/))
+        </script>
+    </head>
+</html>

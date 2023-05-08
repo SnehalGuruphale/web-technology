@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>register</title>
+        <script>
+
+            var emp=[]
+
+            function save()
+            {
+            var name=document.getElementById("name").value
+            var email=document.getElementById("email").value
+            var date=document.getElementById("date").value
+            var gender_dom_array=document.getElementByName("gender")
+            var gender = ""
+            if(gender_dom_array[0].checked)
+            {
+                gender=gender_dom_array[0].value
+            }
+            else if(gender_dom_array[1].checked)
+            {
+                gender=gender_dom_array[1].value
+            }
+            else if(gender_dom_array[2].checked)
+            {
+                gender=gender_dom_array[2].value
+            }
+
+            var lang_dom_array=document.getElementsByName("lang")
+            var lang=[]  //to store multiple options
+
+            if(lang_dom_array[0].checked)
+            {
+                lang.push(lang_dom_array[0].value)
+            }
+            if(lang_dom_array[1].checked)
+            {
+                lang.push(lang_dom_array[1].value)
+            }
+            if(lang_dom_array[2].checked)
+            {
+                lang.push(lang_dom_array[2].value)
+            }
+            if(lang_dom_array[3].checked)
+            {
+                lang.push(lang_dom_array[3].value)
+            }
+
+            emp.push({
+                name : name,
+                email : email,
+                date : date,
+                gender : gender,
+                lang : lang
+            })  
+        }
+
+        function display()
+        {
+            var htmlstr=" "
+            for(var i=0;i<emp.length;i++)
+            {
+                htmlstr=htmlstr+"<tr><td>"+emp[i].name+"</td><td>"+emp[i].email+"</td><td>"+emp[i].date+"</td><td>"+emp[i].gender+"</td>td>"+emp[i].language+"</td>/tr>"
+
+             /*   htmlstr=htmlstr + '<tr>
+                                    <td>${emp[i].name}</td>
+                                    <td>${emp[i].email}</td>
+                                    <td>${emp[i].date}</td>
+                               </tr>'*/ 
+            }
+        }
+        document.getElementById("table-body").innerHTML=htmlstr
+        </script>
+    </head>
+    <body>
+        enter name:<input type="text" id="name"><br>
+        enter email:<input type="email" id="email"><br>
+        enter dob:<input type="date" id="date"><br>
+        gender:
+            <input type="radio" name="gender" value="male">male
+            <input ytpe="radio" name="gender" value="female">female
+            <input ytpe="radio" name="gender" value="others">others
+        
+         <br> 
+         
+         language:
+            <input type="checkbox" name="lang" value="hindi">Hindi
+            <input type="checkbox" name="lang" value="marathi">marathi
+            <input type="checkbox" name="lang" value="english">english
+            <input type="checkbox" name="lang" value="urdu">urdu
+         <br>
+        <button onclick="save()">save</button>
+        <button onclick="display()">show</button>
+
+        <table border="1">
+            <thead>
+                <tr>
+                  <th>name</th>
+                  <th>email</th>
+                  <th>dob</th>
+                </tr>
+            </thead>
+
+            <tbody id="table-body">
+                 <tr><td>snahel</td><td>snehal@gmail.com</td><td>12 feb 1997</td><td>female</td><td>marathi</td></tr>
+                 <tr><td>helan</td><td>ehal@gmail.com</td><td>13 feb 1997</td></tr>
+
+            </tbody>
+        </table>
+    </body>
+</html>

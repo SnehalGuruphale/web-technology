@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>demdemo2</title>
+        <script>
+            function greeting(){
+                var name=document.getElementById("name").value
+                document.getElementById("greet").innerHTML="welcome"+name
+
+            }
+        </script>
+        <body>
+            enter name=<input type="text" id="name">
+            <button onclick="greeting()">click me</button>
+            <span id="greet"></span>
+        </body>
+    </head>
+</html>

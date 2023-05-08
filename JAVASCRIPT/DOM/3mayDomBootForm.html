@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Employee</title>
+        <script>
+            var emp=[]
+             function save()
+             {
+                var name=document.getElementById("name").value
+                var email=document.getElementById("email").value
+                var dob=document.getElementById("dob").value
+                var gender_dom_array=document.getElementByName("gender")
+        var gender=" "
+            if(gender_dom_array[0].checked)
+            {
+                gender=gender_dom_array[0].value
+            }
+            else if(gender_dom_array[1].checked)
+            {
+                gender=gender_dom_array[1].value
+            }
+            else if(gender_dom_array[2].checked)
+            {
+                gender=gender_dom_array[2].value
+            }
+
+            var lang_dom_array=document.getElementsByName("lang")
+            var lang=[]  //to store multiple options
+
+            if(lang_dom_array[0].checked)
+            {
+                lang.push(lang_dom_array[0].value)
+            }
+            if(lang_dom_array[1].checked)
+            {
+                lang.push(lang_dom_array[1].value)
+            }
+            if(lang_dom_array[2].checked)
+            {
+                lang.push(lang_dom_array[2].value)
+            }
+            if(lang_dom_array[3].checked)
+            {
+                lang.push(lang_dom_array[3].value)
+            }
+
+            var state=document.getElementById("state").value
+              emp.push({
+                name:name,
+                email:email,
+                dob:dob,
+                gender:gender,
+                lang:lang,
+                state:state
+              })
+             }
+
+             function show()
+             {
+                var htmlstr=""
+                for(var i=0;i<emp.length;i++)
+                {
+                    htmlstr += `<tr>
+                                     <td>${emp[i].name}</td>
+                                     <td>${emp[i].email}</td>
+                                     <td>${emp[i].dob}</td>
+                                     <td>${emp[i].gender}</td>
+                                     <td>${emp[i].language}</td>
+                                     <td>${emp[i].state}</td>
+
+                               </tr>`
+                }
+             }
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row justify-content-evenly align-items-center" style="height:100vh">
+                <div class="col-4">
+                    <input class="form-control" type="text" id="name" placeholder="name">
+                    <input class="form-control" type="text" id="name" placeholder="name">
+                    <label class="form-label">Date of birth</label>
+
+                    <input class="form-control mb-3" type="date" id="dob" placeholder="name">
+                     
+                    <div class="mb-3">
+                        <label class="form-label">gender</label>
+                        <input type="radio" name="gender" value="male">male
+                        <input ytpe="radio" name="gender" value="female">female
+                        <input ytpe="radio" name="gender" value="others">others
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">language</label>
+                        <input type="checkbox" name="lang" value="hindi">Hindi
+                        <input type="checkbox" name="lang" value="marathi">marathi
+                        <input type="checkbox" name="lang" value="english">english
+                        <input type="checkbox" name="lang" value="urdu">urdu
+   
+                    </div>
+                    <select class="form-center">
+                        <button class="btn btn-primary" onclick="save()">save</button>
+                        <button class="btn btn-primary" onclick="show()">show</button>
+                    </select>
+
+                    <div class="center">
+                        <button>save</button>
+                        <button>show</button>
+                    </div>
+                       
+                </div>
+                <div class="col-6">Table</div>
+            </div>
+        </div>
+    </body>
+</html>

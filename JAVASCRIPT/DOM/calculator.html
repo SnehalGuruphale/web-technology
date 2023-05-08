@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <script>
+               
+            function add_fun(){
+                var num1=document.getElementById("num1").value
+                var num2=document.getElementById("num2").value
+                var result=Number(num1)+Number(num2)
+                document.getElementById("data").innerHTML=result
+            }
+            function sub_fun()
+            {
+                var num1=document.getElementById("num1").value
+                var num2=document.getElementById("num2").value
+                var result=Number(num1)-Number(num2)
+                document.getElementById("data").innerHTML=result
+            }
+            function mul_fun()
+            {
+                var num1=document.getElementById("num1").value
+                var num2=document.getElementById("num2").value
+                var result=Number(num1)*Number(num2)
+                document.getElementById("data").innerHTML=result
+            }
+            function div_fun()
+            {
+                var num1=document.getElementById("num1").value
+                var num2=document.getElementById("num2").value
+                var result=Number(num1)/Number(num2)
+                document.getElementById("data").innerHTML=result
+            }
+            function mod_fun()
+            {
+                var num1=document.getElementById("num1").value
+                var num2=document.getElementById("num2").value
+                var result=Number(num1)%Number(num2)
+                document.getElementById("data").innerHTML=result
+            }
+        </script>
+    </head>
+    <body>
+        enter num1<input type="text" id="num1"><br>
+        enter num2<input type="text" id="num2"><br>
+        <button onclick="add_fun()">add</button>
+        <button onclick="sub_fun()">sub</button>
+        <button onclick="mul_fun()">mul</button>
+        <button onclick="div_fun()">div</button>
+        <button onclick="mod_fun()">mod</button><br>
+
+        <h1 id="data">show result</h1>
+
+    </body>
+</html>

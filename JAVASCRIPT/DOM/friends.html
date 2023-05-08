@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>friends</title>
+    </head>
+    <script>
+        friend=[]  
+        function add()
+        {
+            for(var i=0;i<5;i++)
+            {
+               var n=document.getElementById("name").value
+               var temp ={
+                            n:name,
+                         };
+               friend.push(temp)
+            }
+        }
+        function show()
+        {
+            var htmlstr="ol"
+            for(var i=0;i<friend.length;i++)
+            {
+               htmlstr=htmlstr+"<li>"+friend[i].name+"</li>"
+            }
+            htmlstr=htmlstr+"/ol"
+        }
+    </script>
+    <body>
+       <h1>friends list</h1>
+       enter friends name<input type="text" id="name"><br>
+       <button onclick="add">add friend</button>
+       <button onclick="show">show friends</button>
+       <
+    </body>
+</html>
