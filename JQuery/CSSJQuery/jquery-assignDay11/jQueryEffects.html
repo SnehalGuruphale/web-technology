@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+   <!--2.Try toggle, fadeIn,fadeOut,fadeToggle,slideToggle in the effects code file -->
+
+	<style type="text/css">
+		.block{
+			border: 1px solid black;
+			width : 200px;
+			height : 200px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#hide-btn").click(function(){
+				$(".block").hide(5000,"linear",function(){
+					$(".block").css({"background-color": "yellow"})
+				})
+			})
+
+			$("#show-btn").click(function(){
+				$(".block").show(5000,function(){
+					$(".block").css({"background-color": "red"})	
+				})
+			})
+			$("#slideup-btn").click(function(){
+				$(".block").slideUp(6000)
+			})
+			$("#slidedown-btn").click(function(){
+				$(".block").slideDown(6000,function(){
+					$(".block").css({"background-color": "green"})		
+				})
+			})
+            $("#slideToggle-btn").click(function(){
+				$(".block").slideToggle(1000,function(){
+					$(".block").css({"background-color": "yellow"})		
+				})
+			})
+            $("#toggle-btn").click(function(){
+				$(".block").toggle(1000,function(){
+					$(".block").css({"background-color": "pink"})		
+				})
+			})
+            $("#fadeIn-btn").click(function(){
+				$(".block").fadeIn(1000,function(){
+					$(".block").css({"background-color": "orange"})		
+				})
+			})
+            $("#fadeOut-btn").click(function(){
+				$(".block").fadeOut(1000,function(){
+					$(".block").css({"background-color": "blue"})		
+				})
+			})
+            $("#fadeToggle-btn").click(function(){
+				$(".block").fadeToggle(1000,function(){
+					$(".block").css({"background-color": "green"})		
+				})
+			})
+
+		})
+		/*
+			show,hide,toggle
+			slideUp,slideDown,slideToggle
+			fadeIn,fadeOut,fadeToggle
+		*/
+	</script>
+</head>
+<body>
+	<div class="block"><image src="C:\Users\HP\Downloads\i1.jpg" style="height:25vh"> </image></div>
+	<br><br>
+	<button id="hide-btn">Hide</button>
+	<button id="show-btn">Show</button>
+    <button id="toggle-btn">toggle</button>
+
+	<button id="slideup-btn">slideup</button>
+	<button id="slidedown-btn">slidedown</button>
+    <button id="slideToggle-btn">slideToggle</button>
+
+    <button id="fadeIn-btn">fadeIn</button>
+	<button id="fadeOut-btn">fadeOut</button>
+    <button id="fadeToggle-btn">fadeToggle</button>
+
+
+</body>
+</html>

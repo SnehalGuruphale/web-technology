@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>jquey_calculator</title>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.js" 
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" 
+        crossorigin="anonymous"></script>
+        <script>
+        // $(css_selector).function(argument)
+
+            function add(){
+               //var num2=document.getElementById("num2").value
+
+               var num1=$("#num1").val() //for value write val()
+               //var num2=document.getElementById("num2").value
+               var num2=$("#num2").val()
+               var result=Number(num1)+Number(num2)
+                //document.getElementById("res").innerHTML="result is"+result
+                $("#res").html("result is "+result)
+            }
+
+            //DOMContentloaded
+            //event handling
+            $(document).ready(function(){
+            $("#add-btn").click(add)})
+
+        </script>
+    </head>
+    <body>
+        enter num1<input type="text" id="num1"><br>
+        enter num1<input type="text" id="num2"><br>
+        <button id="add-btn">add</button>
+        <span id="res"></span>
+
+        
+    </body>
+</html>
